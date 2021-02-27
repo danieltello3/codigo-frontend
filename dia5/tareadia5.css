@@ -1,5 +1,6 @@
 body {
    text-align: center;
+   background-image: url(https://images.unsplash.com/photo-1559825481-12a05cc00344?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHw%3D&w=1000&q=80);
 }
 
 #nombre {
@@ -23,5 +24,9 @@ body {
 }
 
 img {
-    border-radius: 10px;
+   border-radius: 10px;
+}
+
+img:hover {
+   height: 400px;
 }
