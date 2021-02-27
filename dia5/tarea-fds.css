@@ -2,15 +2,12 @@ body {
    text-align: center;
    margin: 0;
    padding: 0;
-   
 }
 
 header {
-    background-color: #344a69;
-    width: 100%;
-    
+   background-color: #344a69;
+   width: 100%;
 }
-
 
 #foto-perfil {
    width: 200px;
@@ -28,7 +25,6 @@ ul {
 
 li {
    display: inline-block;
-   
 }
 li a {
    display: block;
@@ -43,41 +39,47 @@ li a:hover {
 }
 
 .active {
-    background-color: #355c91;
-  }
+   background-color: #355c91;
+}
 
 #foot {
-    height: 25px;
-    width: 100%;
-    padding: 5px;
-    background-color: #333;
-    color: white;
-    bottom: 0;
+   height: 25px;
+   width: 100%;
+   padding: 5px;
+   background-color: #333;
+   color: white;
+   bottom: 0;
 }
 
 #imagen-central {
-    height: 400px;
-    width: 768px;
+   height: 400px;
+   width: 768px;
 }
 
 .column {
-    float: left;
-    width: 50%;
+   float: left;
+   width: 50%;
 }
 
 .column > p {
-    font-size: 20px;
+   font-size: 20px;
+   margin: 0 15%;
 }
 
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
+   content: "";
+   display: table;
+   clear: both;
+   margin: 5% 0;
 }
 
-#frase {
-    margin: 25% 0;
+.row {
+    margin: 5% 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
-
-
+h1 {
+    color: #355c91;
+}
