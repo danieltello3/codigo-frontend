@@ -11,3 +11,17 @@ body {
     background-color: rgb(37, 35, 35);
     text-align: center;
 }
+
+header {
+    background-color: rgb(58, 57, 57);
+}
+.hola-mundo {
+    color: hotpink;
+    font-size: 50px;
+}
+
+#lugar {
+    background-color: sandybrown;
+    font-size: 20px;
+    color: whitesmoke;
+}
