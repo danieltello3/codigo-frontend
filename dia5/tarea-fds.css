@@ -1,0 +1,83 @@
+body {
+   text-align: center;
+   margin: 0;
+   padding: 0;
+   
+}
+
+header {
+    background-color: #344a69;
+    width: 100%;
+    
+}
+
+
+#foto-perfil {
+   width: 200px;
+   border-radius: 50%;
+   padding: 20px;
+}
+
+ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: #333;
+}
+
+li {
+   display: inline-block;
+   
+}
+li a {
+   display: block;
+   color: white;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+}
+
+li a:hover {
+   background-color: #111;
+}
+
+.active {
+    background-color: #355c91;
+  }
+
+#foot {
+    height: 25px;
+    width: 100%;
+    padding: 5px;
+    background-color: #333;
+    color: white;
+    bottom: 0;
+}
+
+#imagen-central {
+    height: 400px;
+    width: 768px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.column > p {
+    font-size: 20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#frase {
+    margin: 25% 0;
+}
+
+
+
