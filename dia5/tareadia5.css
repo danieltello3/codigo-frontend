@@ -1,0 +1,23 @@
+body {
+   text-align: center;
+}
+
+#nombre {
+   font-size: 40px;
+   font-weight: bold;
+}
+
+.texto {
+   font-size: 25px;
+   color: teal;
+}
+
+.subtitulo {
+   text-align: start;
+   font-size: 35px;
+}
+
+#foot {
+   background-color: teal;
+   font-size: 20px;
+}
