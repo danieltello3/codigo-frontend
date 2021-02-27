@@ -2,3 +2,12 @@ p {
     color: blueviolet;
 }
 
+h1 {
+    color: green;
+    font-size: 100px;
+}
+
+body {
+    background-color: rgb(37, 35, 35);
+    text-align: center;
+}
