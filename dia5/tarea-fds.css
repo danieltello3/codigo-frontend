@@ -54,6 +54,8 @@ li a:hover {
 #imagen-central {
    height: 400px;
    width: 768px;
+   border-radius: 15%;
+   margin: 20px;
 }
 
 .column {
