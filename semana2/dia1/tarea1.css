@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+#nombre {
+    color: gray;
+}
+
+#li1 {
+    color: green;
+}
+#li2 {
+    color: blue;
+}
+#li3 {
+    color: blueviolet;
+}
+#li4 {
+    color: goldenrod;
+}
+#li5 {
+    color: sienna;
+}
+
+#cancion {
+    font-family: 'Roboto', sans-serif;
+}
+
+#p1 {
+    color: teal;
+    font-family: monospace;
+}
+#p2 {
+    color:sandybrown;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#p3 {
+    color:orchid;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#p4 {
+    color:lightcoral;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+#nom1 {
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+}
+#nom2 {
+    font-size: 50px;
+    font-weight: bold;
+    font-style: oblique;
+}
+#nom3 {
+    font-size: 50px;
+    font-weight: bold;
+    font-style: inherit;
+}
