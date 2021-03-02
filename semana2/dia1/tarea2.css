@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&family=Great+Vibes&family=Pacifico&family=Shippori+Mincho&display=swap');
+
+
+
+div > img {
+    width: 150px;
+}
+
+#imagen {
+    text-align: center;
+}
+
+#nombre {
+    text-align: center;
+    color:gray;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#li1 {
+    color: green;
+}
+#li2 {
+    color: rgb(75, 93, 196);
+}
+#li3 {
+    color: rgb(206, 108, 209);
+}
+#li4 {
+    color: rgb(219, 196, 67);
+}
+#li5 {
+    color: rgb(91, 172, 197);
+}
+
+#cancion {
+    font-family: 'Roboto', sans-serif;
+}
+
+#poem1{
+    font-family: 'Shippori Mincho', serif;
+    color:#9b111e;
+}
+#poem2 {
+    font-family: 'Dancing Script', cursive;
+    color:#ce2029;
+}
+#poem3 {
+    font-family: 'Great Vibes', cursive;
+    color: #e32636;
+}
+#poem4 {
+    font-family: 'Pacifico', cursive;
+    color: #cd5c5c;
+}
+
+
+#nom1 {
+    font-family: 'Caveat', cursive;
+    font-weight: bold;
+    font-size: 100px;
+}
+
+#nom2 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 100px;
+}
