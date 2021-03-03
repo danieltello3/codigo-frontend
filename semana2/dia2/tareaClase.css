@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+    background-image: url("http://rabbitsblack.com/wp-content/uploads/IMG_6869.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+#nombre{
+    color: white;
+    font-size: 100px;
+}
+
+#imgLetra {
+    border-radius: 15px;
+    height: 500px;
+    
+}
+#img-foot {
+    max-height: 100px;
+    
+}
+

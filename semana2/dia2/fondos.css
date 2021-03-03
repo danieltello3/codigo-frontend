@@ -1,0 +1,29 @@
+body {
+    background-image: url("https://wallpaperaccess.com/full/167767.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#primerParrafo {
+    background-color: red;
+    max-width: 50%;
+}
+
+#segundoParrafo {
+    background-color: green;
+    
+}
+
+#tercerParrafo {
+    background-color: rgba(0, 0, 255,0.5);
+}
+
+#contenedor {
+    height: 400px;
+    width: 350px;
+
+    background-image: url("https://miro.medium.com/max/3840/0*oZLL-N4dGNlBe4Oh.png");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: top right;
+}
