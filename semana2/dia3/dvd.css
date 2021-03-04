@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    background-color: black;
+    text-align: center;
+}
+
+img {
+    filter: invert(8%) sepia(100%) saturate(7478%) hue-rotate(248deg) brightness(92%) contrast(143%);
+    animation: move 10s infinite linear;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0,0);
+    }
+    24.999% {
+        filter: invert(8%) sepia(100%) saturate(7478%) hue-rotate(248deg) brightness(92%) contrast(143%);        
+    }
+    25% {
+        transform: translate(-811.5px,540px);
+        filter: invert(28%) sepia(92%) saturate(6114%) hue-rotate(353deg) brightness(96%) contrast(127%);
+    }
+    49.999% {
+        filter: invert(28%) sepia(92%) saturate(6114%) hue-rotate(353deg) brightness(96%) contrast(127%);
+    }
+    50%{
+        transform: translate(-200px,836px);
+        filter: invert(42%) sepia(97%) saturate(1270%) hue-rotate(85deg) brightness(126%) contrast(125%);
+    }
+    74.999% {
+        filter: invert(42%) sepia(97%) saturate(1270%) hue-rotate(85deg) brightness(126%) contrast(125%);
+    }
+    75% {
+        transform: translate(810px,540px);
+        filter: invert(100%) sepia(90%) saturate(7494%) hue-rotate(357deg) brightness(102%) contrast(105%);
+    }
+    99.999% {
+        filter: invert(100%) sepia(90%) saturate(7494%) hue-rotate(357deg) brightness(102%) contrast(105%);
+    }
+    100% {
+        transform: translate(0,0);
+        filter: invert(8%) sepia(100%) saturate(7478%) hue-rotate(248deg) brightness(92%) contrast(143%);
+    }
+}
