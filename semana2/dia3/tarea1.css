@@ -1,0 +1,22 @@
+#gradiente1 {
+   height: 695px;
+   width: 250px;
+   border-radius: 68%;
+   background-image: linear-gradient(
+      to top left,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet
+   )
+   ;
+}
+
+#edad {
+   text-align: center;
+   font-size: 50px;
+   color: white;
+}
