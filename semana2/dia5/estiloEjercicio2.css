@@ -1,31 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 body {
-    background-color: #9EDBD2;
-    text-align: center;
-    margin: auto;
+   background-color: #706052ee;
+   text-align: center;
 }
-.pregunta{
-    margin-bottom: 20px;
+
+* {
+   font-family: "Poppins", sans-serif;
 }
+
+#titulo {
+   padding-top: 30px;
+   font-size: 20px;
+}
+
 #container {
-    background-color: white;
-    width: 900px;
-    height: 900px;
-    margin: auto;
+   background-color: white;
+   width: 900px;
+   height: 900px;
+   margin: auto;
+}
+
+.pregunta {
+   width: 100%;
+   display: inline-block;
+   text-align: right;
+   margin-bottom: 25px;
+}
+
+.respuesta {
+   width: 50%;
+   display: inline-block;
+   text-align: left;
+   padding-left: 10px;
+}
+
+.frontend {
+   width: 40%;
+   vertical-align: top;
+   position: relative;
+   display: inline-block;
+}
+
+.frontend > p {
+   margin: 0;
 }
 
 button {
-    margin-top: 80px;
+   margin-top: 50px;
+   width: 100px;
+   height: 50px;
 }
 
-
-#titulo {
-    padding-top: 30px;
-    font-size: 20px;
-    font-family: 'Poppins', sans-serif;
-}
-
-#pregunta-frontend {
-    display: inline-flex;
-    padding: auto;
+input {
+   padding: 5px;
 }

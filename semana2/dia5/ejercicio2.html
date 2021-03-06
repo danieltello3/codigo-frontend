@@ -1,56 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estiloEjercicio2.css">
-    <title>Formulario</title>
-</head>
-<body>
-    <main>
-        <h1>Survey Form</h1>
-        <div id="container">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="estiloEjercicio2.css" />
+      <title>Formulario</title>
+   </head>
+   <body>
+      <main>
+         <h1>Survey Form</h1>
+         <div id="container">
             <p id="titulo">Una pequeña encuesta sobre Frontend</p>
             <form action="">
-                <div class="pregunta">
-                    <label for="name">* Nombre: </label>
-                    <input type="text" id="name" placeholder="Ingresa tu nombre" required>
-                </div>
-                <div class="pregunta">
-                    <label for="email">* Email: </label>
-                    <input type="text" id="email" placeholder="Ingresa tu Email" required>
-                </div>
-                <div class="pregunta">
-                    <label for="age">* Edad: </label>
-                    <input type="number" id="age" placeholder="Edad" required>
-                </div>
-                <div class="pregunta">
-                    <label for="role">Selecciona ocupación: </label>
-                    <select name="role" id="role">
+               <div class="pregunta">
+                  <label for="name">* Nombre: </label>
+                  <div class="respuesta">
+                     <input
+                        type="text"
+                        id="name"
+                        placeholder="Ingrese su nombre"
+                        required
+                     />
+                  </div>
+               </div>
+               <div class="pregunta">
+                  <label for="email">* Email: </label>
+                  <div class="respuesta">
+                     <input
+                        type="text"
+                        id="email"
+                        placeholder="Ingrese su Email"
+                        required
+                     />
+                  </div>
+               </div>
+               <div class="pregunta">
+                  <label for="age">* Edad: </label>
+                  <div class="respuesta">
+                     <input
+                        type="number"
+                        id="age"
+                        placeholder="Edad"
+                        required
+                     />
+                  </div>
+               </div>
+               <div class="pregunta">
+                  <label for="role">Selecciona ocupación: </label>
+                  <div class="respuesta">
+                     <select name="role" id="role">
                         <option value="carrera1">carrera 1</option>
                         <option value="carrera2">carrera 2</option>
                         <option value="carrera3">carrera 3</option>
-                    </select>
-                </div>
-                <div id="pregunta-frontend">
-                    <label>Que tanto te gusta el frontend</label>
-                    <div id="contenido-frontend">
-                        <input type="radio" id="mucho" name="categoria" value="mucho"><label for="mucho">Mucho</label>
-                        <br>
-                        <input type="radio" id="maso" name="categoria" value="mucho"><label for="maso">Maso</label>
-                        <br>
-                        <input type="radio" id="poco" name="categoria" value="mucho"><label for="poco">Poco</label>
-                    </div>
-                    
-                </div>
-                <div><label for=""></label><input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox"></div>
-                <div><label for=""></label><input type="text"></div>
-                <button>OK, enviar</button>
+                     </select>
+                  </div>
+               </div>
+               <div class="pregunta">
+                  <div class="frontend">
+                     <p>Que tanto te gusta el frontend?</p>
+                  </div>
+                  <div class="respuesta">
+                     <input
+                        type="radio"
+                        id="mucho"
+                        name="categoria"
+                        value="mucho"
+                     /><label for="mucho">Mucho</label>
+                     <br />
+                     <input
+                        type="radio"
+                        id="maso"
+                        name="categoria"
+                        value="mucho"
+                     /><label for="maso">Maso</label>
+                     <br />
+                     <input
+                        type="radio"
+                        id="poco"
+                        name="categoria"
+                        value="mucho"
+                     /><label for="poco">Poco</label>
+                  </div>
+               </div>
+               <div class="pregunta">
+                  <label for="role"
+                     >Que es lo que más te gusta del Frontend?</label
+                  >
+                  <div class="respuesta">
+                     <select name="role" id="role">
+                        <option value="default">Selecciona opcion</option>
+                        <option value="opcion1">opcion1</option>
+                        <option value="opcion2">opcion2</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="pregunta">
+                  <div class="frontend">
+                     <p>Que es lo que más te emociona del Frontend?</p>
+                  </div>
+                  <div class="respuesta">
+                     <input type="checkbox" id="html" /><label for="html"
+                        >HTML</label
+                     ><br />
+                     <input type="checkbox" id="css" /><label for="css"
+                        >CSS</label
+                     ><br />
+                     <input type="checkbox" id="javascript" /><label
+                        for="javascript"
+                        >JavaScript</label
+                     >
+                  </div>
+               </div>
+
+               <button>OK, enviar</button>
             </form>
-        </div>
-    </main>
-</body>
+         </div>
+      </main>
+   </body>
 </html>
