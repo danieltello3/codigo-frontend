@@ -1,0 +1,59 @@
+body {
+    background-image: url(https://images.pexels.com/photos/2169276/pexels-photo-2169276.jpeg?cs=srgb&dl=pexels-c-cagnin-2169276.jpg&fm=jpg);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    margin: 0;
+    
+}
+#logo {
+    width: 150px;
+    height: 50px;
+    
+    
+}
+#logo > img {
+    height: 30px;
+    margin: 10px 20px;
+    
+    
+}
+nav {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+nav > a {
+   display: inline-block;
+   color: white;
+   text-align: center;
+   padding: 16px 16px;
+   text-decoration: none;
+   
+}
+nav > a:hover {
+    background-color: #111;
+}
+
+header {
+    position: fixed;
+    background-color: rgb(67, 27, 99);
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+}
+#fotoPerfil{
+    width: 200px;
+    margin: auto;
+    padding-top: 100px;
+}
+
+#fotoPerfil > img {
+    width: 200px;
+    border-radius: 50%;
+    margin: auto;
+    
+}
