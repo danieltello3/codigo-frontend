@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estiloEjercicio2.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <main>
+        <h1>Survey Form</h1>
+        <div id="container">
+            <p id="titulo">Una pequeña encuesta sobre Frontend</p>
+            <form action="">
+                <div class="pregunta">
+                    <label for="name">* Nombre: </label>
+                    <input type="text" id="name" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="pregunta">
+                    <label for="email">* Email: </label>
+                    <input type="text" id="email" placeholder="Ingresa tu Email" required>
+                </div>
+                <div class="pregunta">
+                    <label for="age">* Edad: </label>
+                    <input type="number" id="age" placeholder="Edad" required>
+                </div>
+                <div class="pregunta">
+                    <label for="role">Selecciona ocupación: </label>
+                    <select name="role" id="role">
+                        <option value="carrera1">carrera 1</option>
+                        <option value="carrera2">carrera 2</option>
+                        <option value="carrera3">carrera 3</option>
+                    </select>
+                </div>
+                <div id="pregunta-frontend">
+                    <label>Que tanto te gusta el frontend</label>
+                    <div id="contenido-frontend">
+                        <input type="radio" id="mucho" name="categoria" value="mucho"><label for="mucho">Mucho</label>
+                        <br>
+                        <input type="radio" id="maso" name="categoria" value="mucho"><label for="maso">Maso</label>
+                        <br>
+                        <input type="radio" id="poco" name="categoria" value="mucho"><label for="poco">Poco</label>
+                    </div>
+                    
+                </div>
+                <div><label for=""></label><input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox"></div>
+                <div><label for=""></label><input type="text"></div>
+                <button>OK, enviar</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

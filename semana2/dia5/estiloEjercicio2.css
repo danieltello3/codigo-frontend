@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body {
+    background-color: #9EDBD2;
+    text-align: center;
+    margin: auto;
+}
+.pregunta{
+    margin-bottom: 20px;
+}
+#container {
+    background-color: white;
+    width: 900px;
+    height: 900px;
+    margin: auto;
+}
+
+button {
+    margin-top: 80px;
+}
+
+
+#titulo {
+    padding-top: 30px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#pregunta-frontend {
+    display: inline-flex;
+    padding: auto;
+}
