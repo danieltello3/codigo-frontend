@@ -1,0 +1,25 @@
+body {
+    margin: auto;
+    text-align: center;
+}
+
+header {
+    background-color: rgba(175, 173, 173, 0.233);
+    margin: 0px 20px 10px 20px;
+    height: 100px;
+}
+h1 {
+    padding-top: 20px;
+}
+header > p {
+    font-size: 12px;
+}
+
+footer > p {
+    color: gray;
+}
+
+img {
+    width: 660px;
+    filter: grayscale(100%);
+}
