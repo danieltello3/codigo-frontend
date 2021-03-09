@@ -3,13 +3,24 @@
 body {
     background-image: url(https://images.pexels.com/photos/2169276/pexels-photo-2169276.jpeg?cs=srgb&dl=pexels-c-cagnin-2169276.jpg&fm=jpg);
     width: 100vw;
-    height: 100vh;
-    position: relative;
     background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    
     margin: 0;
 }
 * {
     font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: fixed;
+    background-color: #292342;
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
 }
 
 #logo > img {
@@ -37,15 +48,7 @@ nav > a:hover {
     background-color: #111;
 }
 
-header {
-    position: fixed;
-    background-color: rgb(67, 27, 99);
-    height: 50px;
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    top: 0;
-}
+
 #titulo {
     color: white;
     text-align: center;
@@ -62,7 +65,7 @@ header {
     width: 200px;
     border-radius: 50%;
     margin: auto;
-    border: rgba(255, 255, 255, 0.7) solid 5px;
+    border: rgba(255, 255, 255, 1) solid 5px;
     
 }
 
@@ -83,7 +86,8 @@ header {
     width: 220px;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
-    margin: 0 40px;    
+    margin: 0 40px;
+    cursor: pointer;    
 }
 .boton:hover {
     background-color: rgba(255, 255, 255, 1);
@@ -99,3 +103,4 @@ footer {
     color: white;
     font-size: 20px;
 }
+
