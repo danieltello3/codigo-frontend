@@ -1,24 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap');
 
 html {
-    background: url(https://images.pexels.com/photos/2169276/pexels-photo-2169276.jpeg?cs=srgb&dl=pexels-c-cagnin-2169276.jpg&fm=jpg) no-repeat center center fixed;
-    width: 100vw;
-    height: 100vw;
+    background: url(https://images.pexels.com/photos/5766435/pexels-photo-5766435.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260) no-repeat center center fixed;
+    width: 100%;
     background-size: cover; 
-    
+    position: relative;
 }
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
 }
 
-
-
 header {
     position: fixed;
-    background-color: rgba(0,0,0, 0.4);
+    background-color: rgba(0,0,0, 0.6);
     height: 50px;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     top: 0;
@@ -48,13 +45,18 @@ nav > a {
 nav > a:hover {
     background-color: #111;
 }
-
-
+/* main {
+    max-width: 1000px;
+    margin: auto;
+} */
+#inicio {
+    height: 85vh;
+}
 #titulo {
-    color: white;
+    color: rgb(56, 45, 70);
     text-align: center;
     margin-top: 100px;
-    font-size: 30px;
+    font-size: 45px;
 }
 #fotoPerfil{
     width: 200px;
@@ -65,15 +67,14 @@ nav > a:hover {
 #fotoPerfil > img {
     width: 200px;
     border-radius: 50%;
-    margin: auto;
-    border: rgba(255, 255, 255, 1) solid 5px;
-    
+    border: rgba(56, 45, 70, 1) solid 5px;
+    box-sizing:border-box;
 }
 
 .botones {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .boton {
@@ -81,28 +82,92 @@ nav > a:hover {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: rgb(67, 27, 99);
+    color: rgb(56, 45, 70);
     font-size: 23px;
     height: 70px;
     width: 220px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
-    margin: 0 40px;
+    margin: 10px 20px;
     cursor: pointer;    
 }
 .boton:hover {
     background-color: rgba(255, 255, 255, 1);
 }
+#acerca-de-mi {
+    height: 85vh;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(56, 45, 70, 0.8);
+    display: flex;
+    flex-direction: column;
+    
+}
+#acerca-de-mi h1 {
+    width: 100%;
+    font-size: 50px;
+    margin: 40px 0;
+    color: white;
+    letter-spacing: 1px;
+    
+}
+#acerca-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+#img-quiensoy {
+    width: 265px;
+    border-radius: 25px;
+    margin: 0 50px;
+    box-sizing: border-box;
+    
+}
+#descripcion{
+    width: 600px;
+    height: 265px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+#descripcion h2 {
+    text-align: left;
+    margin: 10px 0;
+}
+#descripcion p {
+    text-align: justify;
+}
+#portafolio {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#portafolio-fotos {
+    display: flex;
+    width: 80%;
+    padding: 20px;
+}
+.port-foto{
+    display: flex;
+    padding: 20px;
+    width: 50%;
+}
+
+
+
 #wave {
     position: absolute;
     width: 100%;
-    bottom: 50px;
-    
+    bottom: 60px;
 }
 #path-wave {
     fill: #333;
+    
 }
-footer {
+#footer {
     background-color: #333;
     position: absolute;
     width: 100%;
@@ -113,28 +178,45 @@ footer {
     flex-direction: row;
     text-align: center;
     justify-content: space-between;    
+    color: white;
 }
 
-#centro {
+#footer-centro {
+    display: flex;
+    align-items: center;
+}
+#footer-centro p{
     display: flex;
 }
 #subfooter-1 {
     display: flex;
     flex-direction: column;
-    font-size: 12px;
+    font-size: 14px;
     text-align: left;
-    padding-left: 10px;
+    padding: 3.5px 20px;
 }
 
 #social {
     display: flex;
     flex-direction: row;
+    margin: 10px 0;
+    align-items: center;
+    
 }
 
 .redes {
     height: 40px;
+    margin: 0 7px;
+    filter: invert(99%) sepia(100%) saturate(2%) hue-rotate(60deg) brightness(108%) contrast(101%);
 }
 
+@media only screen and (max-width: 600px){
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* 
 @media only screen and (max-width: 600px){
     header {
         background-color: purple ;
@@ -160,4 +242,7 @@ footer {
     #fotoPerfil {
         display: none;
     }
-}
+} 
+
+https://images.pexels.com/photos/2169276/pexels-photo-2169276.jpeg?cs=srgb&dl=pexels-c-cagnin-2169276.jpg&fm=jpg
+*/
