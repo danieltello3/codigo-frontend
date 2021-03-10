@@ -1,31 +1,55 @@
 body {
-    background-color: teal;
+   background-color: teal;
 }
 
 /*pantallas pequeñas, celulares hasta 600px*/
 @media only screen and (max-width: 600px) {
-    body {
-        background-color: violet;
-    }
+   body {
+      background-color: violet;
+      text-align: center;
+   }
+   img {
+      width: 450px;
+      border-radius: 15px;
+   }
 }
-
 @media only screen and (min-width: 600px) {
-    body {
-        background-color:teal;
-    }
+   body {
+      background-color: teal;
+      text-align: center;
+   }
+   img {
+    width: 600px;
+    border-radius: 15px;
+ }
 }
 @media only screen and (min-width: 768px) {
-    body {
-        background-color:olive;
-    }
+   body {
+      background-color: olive;
+      text-align: center;
+   }
+   img {
+    width: 750px;
+    border-radius: 15px;
+ }
 }
 @media only screen and (min-width: 992px) {
-    body {
-        background-color:lemonchiffon ;
-    }
+   body {
+      background-color: lemonchiffon;
+      text-align: center;
+   }
+   img {
+    width: 900px;
+    border-radius: 15px;
+ }
 }
 @media only screen and (min-width: 1200px) {
-    body {
-        background-color:lightsalmon;
-    }
+   body {
+      background-color: lightsalmon;
+      text-align: center;
+   }
+   img {
+    width: 1050px;
+    border-radius: 15px;
+ }
 }
