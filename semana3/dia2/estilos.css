@@ -1,0 +1,31 @@
+body {
+    background-color: teal;
+}
+
+/*pantallas pequeñas, celulares hasta 600px*/
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: violet;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        background-color:teal;
+    }
+}
+@media only screen and (min-width: 768px) {
+    body {
+        background-color:olive;
+    }
+}
+@media only screen and (min-width: 992px) {
+    body {
+        background-color:lemonchiffon ;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    body {
+        background-color:lightsalmon;
+    }
+}
