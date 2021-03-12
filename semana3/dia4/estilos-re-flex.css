@@ -54,3 +54,34 @@ html {
     -webkit-box-shadow: 5px 6px 15px -1px rgba(0,0,0,0.75); 
     box-shadow: 5px 6px 15px -1px rgba(0,0,0,0.75);
 }
+
+#contenedor-horizontal2 {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(112, 18, 112, 0.63);
+    margin: 20px;
+}
+
+.frase {
+    color: white;
+    padding: 5px;
+}
+
+@media only screen and (max-width: 600px){
+    #contenedor-horizontal {
+        position: static;
+    }
+    #parrafo {
+        display: none;
+    }
+    #navbar {
+        margin-right: 10px;
+    }
+    #contenedor-vertical {
+        margin-top: 30px;
+    }
+    #contenedor-horizontal2 {
+        flex-wrap: wrap;
+        background-color:rgba(0, 0, 0, 0.8);
+    }
+}
