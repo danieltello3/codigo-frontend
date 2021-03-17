@@ -2,6 +2,7 @@ let seleccionar = document.querySelector("select")
 let titulo = document.querySelector("h1")
 let parrafo = document.querySelector("p")
 
+
 seleccionar.addEventListener('change', letraCancion)
 
 
@@ -11,7 +12,6 @@ function letraCancion(){
     if(eleccion === "" || eleccion === undefined){
         titulo.textContent = ""
         parrafo.textContent = ""
-        
     }else if(eleccion === "mardyBum"){
         titulo.textContent = "Mardy Bum - Arctic Monkeys"
         parrafo.innerHTML = `Well, now then, mardy bum<br>
