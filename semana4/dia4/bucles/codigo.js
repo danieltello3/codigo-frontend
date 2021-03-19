@@ -49,13 +49,23 @@
 
 //
 
-let alumnos_favoritos = ["Cristiano","Messi","Maradona","Pele","Iniesta"]
-let informacion = "Mis alumnos favoritos son: "
+// let alumnos_favoritos = ["Cristiano","Messi","Maradona","Pele","Iniesta"]
+// let informacion = "Mis alumnos favoritos son: "
 
-const texto = document.querySelector("p")
+// const texto = document.querySelector("p")
 
-for(let i =0 ; i < alumnos_favoritos.length; i++){
-    informacion += alumnos_favoritos[i] + ", "
+// for(let i =0 ; i < alumnos_favoritos.length; i++){
+//     informacion += alumnos_favoritos[i] + ", "
+// }
+
+// texto.textContent = informacion
+
+
+let vocales = ["a","e","i","o","u"]
+let titulo = document.querySelector("h1")
+
+for(let i = 0; i < vocales.length ; i++){
+    setTimeout(()=>{
+        titulo.textContent += vocales[i] + " "
+    }, 1000*i)
 }
-
-texto.textContent = informacion
