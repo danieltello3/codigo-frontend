@@ -76,3 +76,28 @@ function binomioCuarta(a,b){
 }
 
 console.log(binomioCuarta(2,6))
+
+function saludo_compuesto(mensaje1,mensaje2){
+    function mostrar_saludo1(mensaje1){
+        return mensaje1
+    }
+
+    function mostrar_saludo2(mensaje2){
+        return mensaje2
+    }
+    return mostrar_saludo1(mensaje1) + " " + mostrar_saludo2(mensaje2)
+}
+
+console.log(saludo_compuesto("hola","que tal"))
+
+//repaso JSON
+let persona = {
+    nombre: "Daniel",
+    apellido: "Tello",
+    edad: 28
+}
+
+console.log(typeof(persona.edad))
+
+//typeOf
+
