@@ -60,12 +60,29 @@
 
 // texto.textContent = informacion
 
+//tarea usando setTimeout
+
+// for(let i = 0; i < vocales.length ; i++){
+//     setTimeout(()=>{
+//         titulo.textContent += vocales[i] + " "
+//     }, 1000*i)
+// }
+
 
 let vocales = ["a","e","i","o","u"]
 let titulo = document.querySelector("h1")
+let i=0;
 
-for(let i = 0; i < vocales.length ; i++){
-    setTimeout(()=>{
-        titulo.textContent += vocales[i] + " "
-    }, 1000*i)
+function imprimeVocal(){
+    let intervalo = setInterval(()=>{
+        if(i==vocales.length){
+            clearInterval(intervalo);
+        }else{
+            titulo.textContent += vocales[i] + " "
+            i++
+        }
+    },1000)
 }
+
+imprimeVocal()
+
