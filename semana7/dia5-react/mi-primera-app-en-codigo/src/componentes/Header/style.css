@@ -1,0 +1,21 @@
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a{
+    text-decoration: none;
+    padding: 10px;
+    color: #000
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    
+}
+
+.logo{
+    padding: 10px;
+}

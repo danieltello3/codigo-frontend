@@ -1,12 +1,14 @@
 import React from 'react'
+import './style.css'
 
 const Header = () => {
     return (
         <nav className="cabecera">
-            <h1>El blog de codiGo</h1>
+            <h1 className="logo">codiBlog</h1>
             <div className="links">
                 <a href="/">Inicio</a>
-                <a href="/crear">Crear nueva cuenta</a>
+                <a href="/crear">nueva entrada</a>
+                <a href="/contacto">Contacto</a>
             </div>
         </nav>
     )
