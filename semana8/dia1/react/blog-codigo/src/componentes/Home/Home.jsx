@@ -10,16 +10,37 @@
 //es mantenido por facebook
 //usa una sintaxis basada en XML
 
-import React from 'react'
+import React, {useState} from 'react'
 import './index.css'
-import NavBar from './../Navbar/NavBar'
+
 
 const Home = () => {
+
+    const [mes, setMes] = useState("")
+    function adivinarElMes(mesActual){
+        if(mesActual === "junio"){
+            setMes("Junio")
+            alert(`Adivinaste el mes!! ${mes}`)
+        }else{
+            setMes("")
+            alert("uy! no adivinaste")
+        }
+    }
+
+    const haciendoClick = () => {console.log("hiciste click pero en una funcion")}
+
+    const otroClick = () => {console.log("OTRO CLICK")}
+    
+    const funcionConParametros = (valor)=>{console.log(`esta es una funcion con el siguiente parametro ${valor}`)}
     return (
         
         <div className="container">
-            <NavBar/>
+            <button onClick={()=>{console.log("hiciste click")}}>Hazme click</button>
+            <button onClick={()=> haciendoClick()}>Otro boton para eventos</button>
+            <button onClick={otroClick}>boton 3</button>
+            <button onClick={()=>{funcionConParametros("soyunvalor")}}>Pasando parametros</button>
             <p>Hola mundo</p>
+            <button onClick={()=>{adivinarElMes(prompt("adivina el mes"))}}>Adivina el mes</button>
         </div>
     )
 }
