@@ -10,39 +10,60 @@
 //es mantenido por facebook
 //usa una sintaxis basada en XML
 
-import React, {useState} from 'react'
-import './index.css'
-
+import React, { useState } from "react";
+import ListaBlog from "../ListaBlog/ListaBlog";
+import "./index.css";
 
 const Home = () => {
+   //un hook es una funcion que la uso desde la libreria de React
+   //useState es una funcion que me permite observar los cambios de valor de una propiedad(variable)
+   //toma dos parametros, una constante que es el valor que tendra los cambios
+   //y una funcion que me permitira actualizar esa constante
+   //debo pasarle un valor inicial
 
-    const [mes, setMes] = useState("")
-    function adivinarElMes(mesActual){
-        if(mesActual === "junio"){
-            setMes("Junio")
-            alert(`Adivinaste el mes!! ${mes}`)
-        }else{
-            setMes("")
-            alert("uy! no adivinaste")
-        }
-    }
+   const [blogs, setBlogs] = useState([
+      {
+         titulo: "Nuevos proyectos de los alumnos de codiGo",
+         body:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas corrupti repellat velit laudantium assumenda minus maiores quam ut, eos ad, dolor nobis sint corporis. Hic minima quidem debitis nemo illum.",
+         autor: "Daniel Tello",
+         url:
+            "https://images.pexels.com/photos/1697220/pexels-photo-1697220.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+         id: 1,
+      },
+      {
+         titulo: "Nuevos proyectos de los alumnos de codiGo",
+         body:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas corrupti repellat velit laudantium assumenda minus maiores quam ut, eos ad, dolor nobis sint corporis. Hic minima quidem debitis nemo illum.",
+         autor: "Daniel Tello",
+         url:
+            "https://images.pexels.com/photos/1697220/pexels-photo-1697220.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+         id: 2,
+      },
+      {
+         titulo: "Nuevos proyectos de los alumnos de codiGo",
+         body:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas corrupti repellat velit laudantium assumenda minus maiores quam ut, eos ad, dolor nobis sint corporis. Hic minima quidem debitis nemo illum.",
+         autor: "Beto",
+         url:
+            "https://images.pexels.com/photos/1697220/pexels-photo-1697220.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+         id: 3,
+      },
+   ]);
+   const eliminarPost = (ID) => {
+      setBlogs(blogs.filter((blog) => blog.id !== ID));
+   };
+   return (
+      <div className="container">
+         {blogs?.map((blog) => (
+            <ListaBlog
+               blog={blog}
+               key={blog.id}
+               eliminarPost={()=>eliminarPost(blog.id)}
+            />
+         ))}
+      </div>
+   );
+};
 
-    const haciendoClick = () => {console.log("hiciste click pero en una funcion")}
-
-    const otroClick = () => {console.log("OTRO CLICK")}
-    
-    const funcionConParametros = (valor)=>{console.log(`esta es una funcion con el siguiente parametro ${valor}`)}
-    return (
-        
-        <div className="container">
-            <button onClick={()=>{console.log("hiciste click")}}>Hazme click</button>
-            <button onClick={()=> haciendoClick()}>Otro boton para eventos</button>
-            <button onClick={otroClick}>boton 3</button>
-            <button onClick={()=>{funcionConParametros("soyunvalor")}}>Pasando parametros</button>
-            <p>Hola mundo</p>
-            <button onClick={()=>{adivinarElMes(prompt("adivina el mes"))}}>Adivina el mes</button>
-        </div>
-    )
-}
-
-export default Home
+export default Home;
