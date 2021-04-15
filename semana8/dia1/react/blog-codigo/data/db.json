@@ -1,0 +1,25 @@
+{
+   "blogs": [
+      {
+         "titulo": "Nuevos proyectos de los alumnos de codiGo",
+         "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas corrupti repellat velit laudantium assumenda minus maiores quam ut, eos ad, dolor nobis sint corporis. Hic minima quidem debitis nemo illum.",
+         "autor": "Daniel Tello",
+         "url": "https://images.pexels.com/photos/1697220/pexels-photo-1697220.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+         "id": 1
+      },
+      {
+         "titulo": "Nuevos proyectos de los alumnos de codiGo",
+         "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas corrupti repellat velit laudantium assumenda minus maiores quam ut, eos ad, dolor nobis sint corporis. Hic minima quidem debitis nemo illum.",
+         "autor": "Daniel Tello",
+         "url": "https://images.pexels.com/photos/1697220/pexels-photo-1697220.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+         "id": 2
+      },
+      {
+         "titulo": "Nuevos proyectos de los alumnos de codiGo",
+         "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas corrupti repellat velit laudantium assumenda minus maiores quam ut, eos ad, dolor nobis sint corporis. Hic minima quidem debitis nemo illum.",
+         "autor": "Beto",
+         "url": "https://images.pexels.com/photos/1697220/pexels-photo-1697220.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+         "id": 3
+      }
+   ]
+}
