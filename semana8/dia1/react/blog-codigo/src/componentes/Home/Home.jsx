@@ -11,6 +11,7 @@
 //usa una sintaxis basada en XML
 
 import React, { useState, useEffect } from "react";
+// import { useQuery } from 'react-query'
 import ListaBlog from "../ListaBlog/ListaBlog";
 import "./index.css";
 
@@ -22,36 +23,57 @@ const Home = () => {
    //debo pasarle un valor inicial
 
    const [blogs, setBlogs] = useState(null);
-   const [estaPendiente, setPendiente] = useState(true)
+   const [estaPendiente, setPendiente] = useState(true);
+   const [error,setError] = useState();
+
+   
+
+   // const { isLoading,error,data} = useQuery("consulta",() =>{
+   //    fetch("http://localhost:8000/blogs")
+   //          .then(res => res.json())
 
    const eliminarPost = (ID) => {
-      setBlogs(blogs.filter((blog) => blog.id !== ID));
+      setBlogs(blogs.filter((blog) => blog.id !== ID)).then((data) => {
+         setBlogs(data);
+         setPendiente(false);
+         
+      });
    };
 
    useEffect(()=>{
       setTimeout(()=>{
-         fetch("http://localhost:8000/blogs")
-         .then(res => {
+            fetch("http://localhost:8000/blogs")
+            .then(res => {
             return res.json();
          })
-         .then((data) => {
+            .then((data) => {
             setBlogs(data);
-            setPendiente(!estaPendiente);
+            setPendiente(false);
+            setError(null)
+         }).catch(error => {
+            setPendiente(false)
+            setError(error.message)
          })
       }, 2000)
    }, [])
+   
    return (
       <>
          {estaPendiente && <p>Cargando...</p>}
          <div className="container">
-            {blogs?.map((blog) => (
-               <ListaBlog
-                  blog={blog}
-                  key={blog.id}
-                  eliminarPost={()=>eliminarPost(blog.id)}
-               />
-            ))}
+            {
+               blogs ?  blogs?.map((blog) => (
+                  <ListaBlog
+                     blog={blog}
+                     key={blog.id}
+                     eliminarPost={()=>eliminarPost(blog.id)}
+                  />
+               )) : 
+               error &&  <p>{error}</p>
+            }
+           
          </div>
+         
       </>
    );
 };
