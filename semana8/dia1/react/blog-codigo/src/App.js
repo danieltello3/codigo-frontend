@@ -17,7 +17,7 @@ function App() {
           <Route exact path="/">
             <Home/>
           </Route>
-          <Route path="/detail">
+          <Route path="/detail/:id">
             <Detail/>
           </Route>
         </Switch>

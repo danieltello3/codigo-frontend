@@ -10,9 +10,12 @@
 //es mantenido por facebook
 //usa una sintaxis basada en XML
 
-import React, { useState, useEffect } from "react";
+import React from "react";
+import useFetch from "../../hooks/useFetch/useFetch";
+import { useHistory } from 'react-router-dom'
 // import { useQuery } from 'react-query'
 import ListaBlog from "../ListaBlog/ListaBlog";
+
 import "./index.css";
 
 const Home = () => {
@@ -22,51 +25,40 @@ const Home = () => {
    //y una funcion que me permitira actualizar esa constante
    //debo pasarle un valor inicial
 
-   const [blogs, setBlogs] = useState(null);
-   const [estaPendiente, setPendiente] = useState(true);
-   const [error,setError] = useState();
-
+   
    
 
    // const { isLoading,error,data} = useQuery("consulta",() =>{
    //    fetch("http://localhost:8000/blogs")
    //          .then(res => res.json())
 
-   const eliminarPost = (ID) => {
-      setBlogs(blogs.filter((blog) => blog.id !== ID)).then((data) => {
-         setBlogs(data);
-         setPendiente(false);
-         
-      });
-   };
+   
 
-   useEffect(()=>{
-      setTimeout(()=>{
-            fetch("http://localhost:8000/blogs")
-            .then(res => {
-            return res.json();
-         })
-            .then((data) => {
-            setBlogs(data);
-            setPendiente(false);
-            setError(null)
-         }).catch(error => {
-            setPendiente(false)
-            setError(error.message)
-         })
-      }, 2000)
-   }, [])
+   const {data: blogs,isLoading,error} = useFetch("http://localhost:8000/blogs")
+
+   // const eliminarPost = (ID) => {
+   //    setBlogs(blogs.filter((blog) => blog.id !== ID))
+   // };
+
+   //obtener el id con useparams
+   //crear una funcion que use el hook usehistory e imprima el id
+   //le paso la funcion que cree en el onclick
+   const history = useHistory()
+   const redirigirRuta = (id)=>{
+      return history.push(`/detail/${id}`)
+   }
    
    return (
       <>
-         {estaPendiente && <p>Cargando...</p>}
+         {isLoading && <p>Cargando...</p>}
          <div className="container">
             {
                blogs ?  blogs?.map((blog) => (
                   <ListaBlog
                      blog={blog}
                      key={blog.id}
-                     eliminarPost={()=>eliminarPost(blog.id)}
+                     redirigirRuta={()=>redirigirRuta(blog.id)}
+                     // eliminarPost={()=>eliminarPost(blog.id)}
                   />
                )) : 
                error &&  <p>{error}</p>

@@ -1,12 +1,36 @@
-import React from 'react'
+import React from "react";
+import { useParams, useHistory} from "react-router-dom";
+import useFetch from "../../hooks/useFetch/useFetch";
 
 const Detail = () => {
-    return (
-        <div>
-            <h2>Hola, soy un detalle</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, reiciendis! Molestias quidem saepe ea nemo perferendis, officiis odit labore dicta, exercitationem autem quas possimus, voluptas iusto obcaecati sit hic ab!</p>
-        </div>
-    )
-}
+   const { id } = useParams();
+   const url = `http://localhost:8000/blogs/`;
+   const { data: blog, isLoading, error } = useFetch(`${url}${id}`);
+   const history = useHistory();
 
-export default Detail
+   const eliminarEntrada = (id) => {
+      //POST, DELETE, PUT, GET, Metodos para peticiones.
+      fetch(`${url}${id}`, {
+          method: "DELETE"
+      }).then(()=> history.push("/"));
+   };
+
+   return (
+      <div>
+         {isLoading && <div>cargando...</div>}
+         {error && <div>{error}</div>}
+         {blog && (
+            <article>
+               <h2>{blog.titulo}</h2>
+               <p>Escrito por: {blog.autor}</p>
+               <div>{blog.body}</div>
+               <button onClick={() => eliminarEntrada(blog.id)}>
+                  Eliminar ese post
+               </button>
+            </article>
+         )}
+      </div>
+   );
+};
+
+export default Detail;
