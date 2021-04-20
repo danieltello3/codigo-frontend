@@ -1,10 +1,11 @@
 import React from "react";
 import { useParams, useHistory} from "react-router-dom";
 import useFetch from "../../hooks/useFetch/useFetch";
+import { url } from "../../utils/utils";
 
 const Detail = () => {
    const { id } = useParams();
-   const url = `http://localhost:8000/blogs/`;
+   
    const { data: blog, isLoading, error } = useFetch(`${url}${id}`);
    const history = useHistory();
 

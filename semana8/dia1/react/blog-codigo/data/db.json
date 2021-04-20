@@ -20,6 +20,12 @@
       "autor": "Beto",
       "url": "https://images.pexels.com/photos/1697220/pexels-photo-1697220.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
       "id": 3
+    },
+    {
+      "titulo": "blog 4,20",
+      "body": "este es el post por el dia 4/20 #smokeweed",
+      "autor": "Greg",
+      "id": 4
     }
   ]
 }

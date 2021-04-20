@@ -7,6 +7,8 @@ import {
   Route,
 } from "react-router-dom";
 import Detail from './componentes/Detail/Detail';
+import Create from './componentes/Create/Create';
+import NotFound from './componentes/NotFound/NotFound';
 
 
 function App() {
@@ -19,6 +21,12 @@ function App() {
           </Route>
           <Route path="/detail/:id">
             <Detail/>
+          </Route>
+          <Route exact path="/create">
+            <Create/>
+          </Route>
+          <Route path="*">
+            <NotFound/>
           </Route>
         </Switch>
     </Router>

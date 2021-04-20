@@ -17,6 +17,7 @@ import { useHistory } from 'react-router-dom'
 import ListaBlog from "../ListaBlog/ListaBlog";
 
 import "./index.css";
+import { url } from "../../utils/utils";
 
 const Home = () => {
    //un hook es una funcion que la uso desde la libreria de React
@@ -34,7 +35,7 @@ const Home = () => {
 
    
 
-   const {data: blogs,isLoading,error} = useFetch("http://localhost:8000/blogs")
+   const {data: blogs,isLoading,error} = useFetch(url)
 
    // const eliminarPost = (ID) => {
    //    setBlogs(blogs.filter((blog) => blog.id !== ID))
