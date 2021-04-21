@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Detail from './componentes/Detail/Detail';
 import Create from './componentes/Create/Create';
+import Register from './componentes/Register/Register'
 import NotFound from './componentes/NotFound/NotFound';
 
 
@@ -24,6 +25,9 @@ function App() {
           </Route>
           <Route exact path="/create">
             <Create/>
+          </Route>
+          <Route path="/registrarse">
+            <Register/>
           </Route>
           <Route path="*">
             <NotFound/>

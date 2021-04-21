@@ -46,7 +46,7 @@ const NavBar = () => {
                <Button >Informacion</Button>
                <Button >Detalles</Button>
                <Button onClick={() => history.push("/create")}>Crear nuevo blog</Button>
-               <Button >Registrate</Button>
+               <Button onClick={() => history.push("/registrarse")}>Registrate</Button>
                <Button >Iniciar Sesion</Button>
             </div>
          </Toolbar>
