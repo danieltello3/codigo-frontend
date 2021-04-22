@@ -18,6 +18,7 @@ import ListaBlog from "../ListaBlog/ListaBlog";
 
 import "./index.css";
 import { url } from "../../utils/utils";
+import { Col, Row } from "antd";
 
 const Home = () => {
    //un hook es una funcion que la uso desde la libreria de React
@@ -50,24 +51,31 @@ const Home = () => {
    }
    
    return (
+      
       <>
          {isLoading && <p>Cargando...</p>}
+         
          <div className="container">
+            <Row justify="center">
             {
                blogs ?  blogs?.map((blog) => (
+                  <Col style={{ margin: 20}}>
                   <ListaBlog
                      blog={blog}
                      key={blog.id}
                      redirigirRuta={()=>redirigirRuta(blog.id)}
                      // eliminarPost={()=>eliminarPost(blog.id)}
                   />
+                  </Col>
                )) : 
+               
                error &&  <p>{error}</p>
             }
+            </Row>
            
          </div>
-         
-      </>
+      </>  
+      
    );
 };
 

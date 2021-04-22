@@ -10,7 +10,7 @@ const NavBar = () => {
          <img className="logo" src={logo} alt="logo" />
          <nav>
             <a href="/">Home</a>
-            <a href="/Contact">Contacto</a>
+            <a href="/Contacto">Contacto</a>
             <Link to="/info">Informacion</Link>
             <a href="/detail">Detalles</a>
             <a onClick={() => history.push("/create")}>Crear nuevo blog</a>

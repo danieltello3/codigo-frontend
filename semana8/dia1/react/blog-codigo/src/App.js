@@ -9,6 +9,8 @@ import {
 import Detail from './componentes/Detail/Detail';
 import Create from './componentes/Create/Create';
 import NotFound from './componentes/NotFound/NotFound';
+import VistaFooter from './componentes/Footer/Footer';
+import Contacto from './componentes/Contacto/Contacto';
 
 
 function App() {
@@ -18,6 +20,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home/>
+          </Route>
+          <Route path="/contacto">
+            <Contacto/>
           </Route>
           <Route path="/detail/:id">
             <Detail/>
@@ -29,6 +34,7 @@ function App() {
             <NotFound/>
           </Route>
         </Switch>
+        <VistaFooter/>
     </Router>
   );
 }

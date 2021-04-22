@@ -26,6 +26,12 @@
       "body": "este es el post por el dia 4/20 #smokeweed",
       "autor": "Greg",
       "id": 4
+    },
+    {
+      "titulo": "blog agregado con Antd",
+      "body": "este es el contenido del post que se agrego usando form con los estilos de antd",
+      "autor": "Daniel",
+      "id": 5
     }
   ]
 }
