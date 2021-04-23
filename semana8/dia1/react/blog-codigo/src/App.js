@@ -9,11 +9,13 @@ import {
 import Detail from './componentes/Detail/Detail';
 import Create from './componentes/Create/Create';
 import NotFound from './componentes/NotFound/NotFound';
+import {Provider, defaultTheme} from '@adobe/react-spectrum';
 
 
 function App() {
   return (
-    <Router>
+    <Provider theme={defaultTheme}>
+      <Router>
         <NavBar/>
         <Switch>
           <Route exact path="/">
@@ -29,7 +31,8 @@ function App() {
             <NotFound/>
           </Route>
         </Switch>
-    </Router>
+      </Router>
+    </Provider>
   );
 }
 

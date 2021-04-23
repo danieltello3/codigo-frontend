@@ -1,4 +1,8 @@
+import { Button, Flex, Image } from "@adobe/react-spectrum";
 import React from "react";
+import NotFound from '@spectrum-icons/illustrations/NotFound';
+import { IllustratedMessage } from "@react-spectrum/illustratedmessage";
+
 
 const ListaBlog = (props) => {
    const blog = props.blog;
@@ -12,10 +16,11 @@ const ListaBlog = (props) => {
                <h2>{blog.titulo}</h2>
                <p className="autor">Escrito por: {blog.autor}</p>
                <div className="subContainer">
-                  <img src={blog.url} alt="" className="imagen" />
-                  {/* <p className="body">{blog.body}</p> */}
+                  {blog.url ? 
+                     (<Image src={blog.url} objectFit="cover" height='size-3000' className="imagen" />) : 
+                     (<IllustratedMessage><NotFound /></IllustratedMessage>)}
                </div>
-               <button onClick={()=> obtenerDetalle(ID)}>Leer Post</button>
+               <Button variant="cta" width='size-2000' marginEnd='size-800' marginTop='size-200' alignSelf='flex-end' onPress={()=> obtenerDetalle(ID)}>Leer Post</Button>
                {/* <button onClick={()=>eliminarPost(ID)}>Eliminar Post</button> */}
             </div>
         

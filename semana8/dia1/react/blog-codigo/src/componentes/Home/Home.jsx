@@ -18,6 +18,7 @@ import ListaBlog from "../ListaBlog/ListaBlog";
 
 import "./index.css";
 import { url } from "../../utils/utils";
+import {Flex, View} from '@adobe/react-spectrum'
 
 const Home = () => {
    //un hook es una funcion que la uso desde la libreria de React
@@ -52,20 +53,22 @@ const Home = () => {
    return (
       <>
          {isLoading && <p>Cargando...</p>}
-         <div className="container">
+         <Flex direction="row" gap="size-100" wrap='wrap'>
             {
                blogs ?  blogs?.map((blog) => (
+                  <View >
                   <ListaBlog
                      blog={blog}
                      key={blog.id}
                      redirigirRuta={()=>redirigirRuta(blog.id)}
                      // eliminarPost={()=>eliminarPost(blog.id)}
                   />
+                  </View>
                )) : 
                error &&  <p>{error}</p>
             }
            
-         </div>
+         </Flex>
          
       </>
    );
