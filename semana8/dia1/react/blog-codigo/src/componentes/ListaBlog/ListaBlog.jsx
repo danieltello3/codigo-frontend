@@ -1,4 +1,5 @@
 import React from "react";
+import './ListaBlog.scss'
 
 const ListaBlog = (props) => {
    const blog = props.blog;
@@ -10,12 +11,12 @@ const ListaBlog = (props) => {
       
             <div key={blog.id} className="blog">
                <h2>{blog.titulo}</h2>
-               <p className="autor">Escrito por: {blog.autor}</p>
-               <div className="subContainer">
-                  <img src={blog.url} alt="" className="imagen" />
+               <p className="blog__autor">Escrito por: {blog.autor}</p>
+               <div className="blog__subContainer">
+                  <img src={blog.url} alt="" className="blog__subContainer__imagen" />
                   {/* <p className="body">{blog.body}</p> */}
                </div>
-               <button onClick={()=> obtenerDetalle(ID)}>Leer Post</button>
+               <button className="blog__button" onClick={()=> obtenerDetalle(ID)}>Leer Post</button>
                {/* <button onClick={()=>eliminarPost(ID)}>Eliminar Post</button> */}
             </div>
         

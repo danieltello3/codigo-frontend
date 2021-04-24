@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+$font-poppins: 'Poppins';
+.detail{
+    max-width: 70%;
+    margin: auto;
+
+    &__article{
+        font-family: $font-poppins;
+        &__titulo{
+            color: rgb(27, 78, 67);
+            margin-bottom: 5px;
+        }
+        &__autor{
+            color: #333;
+            margin-bottom: 30px;
+        }
+        &__image{
+            
+            height: 300px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+        &__body{
+            max-width: 80%;
+            margin-bottom: 50px;
+        }
+        &__button{
+            max-width: 200px;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            outline: none;
+            border: none;
+            
+            &:hover{
+                background-color: rgb(190, 7, 7);
+            }
+        }
+    }
+}
