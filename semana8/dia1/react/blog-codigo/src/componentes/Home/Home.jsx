@@ -16,7 +16,7 @@ import { useHistory } from 'react-router-dom'
 // import { useQuery } from 'react-query'
 import ListaBlog from "../ListaBlog/ListaBlog";
 
-import "./index.scss";
+import "./index.s`css";
 import { url } from "../../utils/utils";
 
 const Home = () => {

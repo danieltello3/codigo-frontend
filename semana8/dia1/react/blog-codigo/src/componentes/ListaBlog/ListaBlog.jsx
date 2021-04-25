@@ -1,5 +1,6 @@
 import React from "react";
 import './ListaBlog.scss'
+import { motion } from "framer-motion"
 
 const ListaBlog = (props) => {
    const blog = props.blog;
@@ -8,7 +9,7 @@ const ListaBlog = (props) => {
    //  const eliminarPost = props.eliminarPost
 
    return (
-      
+            
             <div key={blog.id} className="blog">
                <h2>{blog.titulo}</h2>
                <p className="blog__autor">Escrito por: {blog.autor}</p>
@@ -16,7 +17,9 @@ const ListaBlog = (props) => {
                   <img src={blog.url} alt="" className="blog__subContainer__imagen" />
                   {/* <p className="body">{blog.body}</p> */}
                </div>
-               <button className="blog__button" onClick={()=> obtenerDetalle(ID)}>Leer Post</button>
+               <motion.button className="blog__button" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={()=> obtenerDetalle(ID)}>
+               Ir a detalle
+               </motion.button>
                {/* <button onClick={()=>eliminarPost(ID)}>Eliminar Post</button> */}
             </div>
         
