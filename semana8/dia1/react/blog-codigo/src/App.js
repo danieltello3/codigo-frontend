@@ -9,6 +9,7 @@ import {
 import Detail from './componentes/Detail/Detail';
 import Create from './componentes/Create/Create';
 import NotFound from './componentes/NotFound/NotFound';
+import Footer from './componentes/Footer/Footer';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <NotFound/>
           </Route>
         </Switch>
+        <Footer/>
     </Router>
   );
 }
