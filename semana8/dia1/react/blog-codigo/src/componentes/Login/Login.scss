@@ -1,0 +1,17 @@
+.container > form{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin-top: 20px;
+    
+    & input{
+        margin-bottom: 20px;
+        outline: none;
+    }
+    & button {
+        background-color: #61DAFB;
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+    }
+}

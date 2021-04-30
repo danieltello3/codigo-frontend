@@ -20,7 +20,7 @@ const Create = () => {
          .add(blog)
          .then(() =>
             MySwal.fire(
-               `El bog ${titulo} de ${autor}`,
+               `El blog ${titulo} de ${autor}`,
                "fue creado exitosamente",
                "success"
             )

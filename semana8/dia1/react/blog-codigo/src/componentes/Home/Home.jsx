@@ -10,15 +10,12 @@
 //es mantenido por facebook
 //usa una sintaxis basada en XML
 
-import React from "react";
-import useFetch from "../../hooks/useFetch/useFetch";
-import { useHistory } from 'react-router-dom'
-// import { useQuery } from 'react-query'
+import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import ListaBlog from "../ListaBlog/ListaBlog";
-
 import "./index.scss";
-import { url } from "../../utils/utils";
-
+import { firestore } from "../../Firebase";
+// import { useQuery } from 'react-query'
 const Home = () => {
    //un hook es una funcion que la uso desde la libreria de React
    //useState es una funcion que me permite observar los cambios de valor de una propiedad(variable)
@@ -26,16 +23,9 @@ const Home = () => {
    //y una funcion que me permitira actualizar esa constante
    //debo pasarle un valor inicial
 
-   
-   
-
    // const { isLoading,error,data} = useQuery("consulta",() =>{
    //    fetch("http://localhost:8000/blogs")
    //          .then(res => res.json())
-
-   
-
-   const {data: blogs,isLoading,error} = useFetch(url)
 
    // const eliminarPost = (ID) => {
    //    setBlogs(blogs.filter((blog) => blog.id !== ID))
@@ -44,29 +34,48 @@ const Home = () => {
    //obtener el id con useparams
    //crear una funcion que use el hook usehistory e imprima el id
    //le paso la funcion que cree en el onclick
-   const history = useHistory()
-   const redirigirRuta = (id)=>{
-      return history.push(`/detail/${id}`)
-   }
-   
+   const [blogs, setBlogs] = useState([]);
+   const history = useHistory();
+   const redirigirRuta = (id) => {
+      return history.push(`/detail/${id}`);
+   };
+
+   // const fetchBlogs = async () => {
+   //    const response = firestore.collection("blogs");
+
+   //    const data = await response.get();
+
+   //    data.docs.forEach(item => {
+
+   //       setBlogs([...blogs, item.data()])
+   //    })
+   // }
+
+   // useEffect(() => {
+   //    fetchBlogs();
+   // },[]);
+   useEffect(() => {
+      const fetchBlogs = async () => {
+         const data = await firestore.collection("blogs").get();
+
+         setBlogs(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      };
+      fetchBlogs();
+   }, []);
+
    return (
       <>
-         {isLoading && <p>Cargando...</p>}
          <div className="container">
-            {
-               blogs ?  blogs?.map((blog) => (
+            {blogs &&
+               blogs.map((blog) => (
                   <ListaBlog
                      blog={blog}
                      key={blog.id}
-                     redirigirRuta={()=>redirigirRuta(blog.id)}
+                     redirigirRuta={() => redirigirRuta(blog.id)}
                      // eliminarPost={()=>eliminarPost(blog.id)}
                   />
-               )) : 
-               error &&  <p>{error}</p>
-            }
-           
+               ))}
          </div>
-         
       </>
    );
 };

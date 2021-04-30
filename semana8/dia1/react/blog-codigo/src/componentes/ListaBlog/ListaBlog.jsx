@@ -9,7 +9,7 @@ const ListaBlog = (props) => {
 
    return (
       
-            <div key={blog.id} className="blog">
+            <div key={blog.id} onClick={()=> obtenerDetalle(ID)} className="blog">
                <h2>{blog.titulo}</h2>
                <p className="blog__autor">Escrito por: {blog.autor}</p>
                <div className="blog__subContainer">
