@@ -1,25 +1,50 @@
-import React from 'react'
-import './Login.scss'
+import React, { useCallback, useState } from "react";
+import "./Login.scss";
+import firebase from "./../../Firebase";
+import { withRouter } from "react-router";
 
-const Login = () => {
+const Login = ({ history }) => {
+   const [password, setPassword] = useState("");
+   const [email, setEmail] = useState("");
 
-    const signIn = (e)=> {
-        e.preventDefault();
+   const handleSignIn = useCallback(
+      async (event) => {
+         event.preventDefault();
 
-    }
+         try {
+            await firebase.auth().signInWithEmailAndPassword(email, password);
+            history.push("/");
+         } catch (err) {
+            alert(err);
+         }
+      },
+      [email, password, history]
+   );
 
-    return (
-        <div className="container">
-            <h2>Hola, Bienvenido al blog de CodiGo</h2>
-            <form onSubmit={signIn}>
-                <label htmlFor="usuario">Usuario</label>
-                <input id="usuario" type="text"/>
-                <label htmlFor="password">Contraseña</label>
-                <input id="password" type="password"/>
-                <button type="submit">Ingresar</button>
-            </form>
-        </div>
-    )
-}
+   return (
+      <div className="container">
+         <h2>Login</h2>
+         <form onSubmit={handleSignIn}>
+            <label htmlFor="email">Correo Electronico</label>
+            <input
+               id="email"
+               type="email"
+               name="email"
+               value={email}
+               onChange={(e) => setEmail(e.target.value)}
+            />
+            <label htmlFor="password">Contraseña</label>
+            <input
+               id="password"
+               type="password"
+               name="password"
+               value={password}
+               onChange={(e) => setPassword(e.target.value)}
+            />
+            <button type="submit">Ingresar</button>
+         </form>
+      </div>
+   );
+};
 
-export default Login
+export default withRouter(Login);
